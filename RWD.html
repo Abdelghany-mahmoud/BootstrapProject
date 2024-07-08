@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+    integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <title>Document</title>
+  <style>
+    .over {
+      position: absolute;
+      bottom: 0px;
+      color: white;
+      border-radius: 5px;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .over h2 {
+      font-size: 3rem;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.35);
+      z-index: 2;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Vacation Rentals</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-star-fill"></i> Top Destinations</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><i class="bi bi-person-fill"></i> About us</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-brightness-high-fill"></i> Book Tickets</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-clock-fill"></i> Reservation
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="overlay"></div>
+    <div class="carousel-inner">
+      <div class="over container-fluid pb-1 pb-sm-3 pb-lg-4">
+        <h2 class="mb-">Best Vacation Rentals</h2>
+        <p>pla pla pal pal pal </p>
+        <button type="button" class="btn btn-primary" onclick="clik()">Start Now!</button>
+      </div>
+      <div class="carousel-item active">
+        <img src="assets/1.jpg" class="d-block" style="width: 100%;" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/2.jpg" class="d-block" style="width: 100%;" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/3.jpg" class="d-block" style="width: 100%;" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev" style="z-index: 3;">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next" style="z-index: 3;">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
+        <img class="img-thumbnail rounded-circle" src="assets/i1.jpg" style="width: 300px;">
+        <div>
+          <h5 class="text-center my-4">Type 1</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nam eius neque modi a earum veritatis, recusandae molestias illo, in suscipit sed nihil delectus nulla,
+            est eum distinctio fuga quod dolore.lore Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Ullam illo dolore eveniet assumenda reiciendis cupiditate quia deserunt maxime reprehenderit est maiores
+            minima exercitationem soluta culpa sint,
+            facere adipisci! Praesentium, maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deserunt vitae autem, aut dolorem illum eaque aliquam eos culpa atque soluta vel incidunt tempora laborum
+            recusandae,
+            qui optio ex odio! Ullam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse laudantium
+            reprehenderit nobis,
+            voluptates odit animi. Provident accusantium, sint veritatis repellat nemo aut perspiciatis nesciunt!
+            Provident aperiam modi dolorum consequatur tenetur.</p>
+          <a href="#" class="btn btn-primary">Book Now $599</a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 d-flex flex-column align-items-center my-3 my-lg-0">
+        <img class="img-thumbnail rounded-circle" src="assets/i2.jpg" style="width: 300px;">
+        <div>
+          <h5 class="text-center my-4">Type 2</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nam eius neque modi a earum veritatis, recusandae molestias illo, in suscipit sed nihil delectus nulla,
+            est eum distinctio fuga quod dolore.lore Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Ullam illo dolore eveniet assumenda reiciendis cupiditate quia deserunt maxime reprehenderit est maiores
+            minima exercitationem soluta culpa sint,
+            facere adipisci! Praesentium, maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deserunt vitae autem, aut dolorem illum eaque aliquam eos culpa atque soluta vel incidunt tempora laborum
+            recusandae,
+            qui optio ex odio! Ullam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse laudantium
+            reprehenderit nobis,
+            voluptates odit animi. Provident accusantium, sint veritatis repellat nemo aut perspiciatis nesciunt!
+            Provident aperiam modi dolorum consequatur tenetur.</p>
+          <a href="#" class="btn btn-danger">Book Now $599</a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 d-flex flex-column align-items-center">
+        <img class="img-thumbnail rounded-circle" src="assets/i3.jpg" style="width: 300px;">
+        <div>
+          <h5 class="text-center my-4">Type 3</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nam eius neque modi a earum veritatis, recusandae molestias illo, in suscipit sed nihil delectus nulla,
+            est eum distinctio fuga quod dolore.lore Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Ullam illo dolore eveniet assumenda reiciendis cupiditate quia deserunt maxime reprehenderit est maiores
+            minima exercitationem soluta culpa sint,
+            facere adipisci! Praesentium, maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deserunt vitae autem, aut dolorem illum eaque aliquam eos culpa atque soluta vel incidunt tempora laborum
+            recusandae,
+            qui optio ex odio! Ullam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse laudantium
+            reprehenderit nobis,
+            voluptates odit animi. Provident accusantium, sint veritatis repellat nemo aut perspiciatis nesciunt!
+            Provident aperiam modi dolorum consequatur tenetur.</p>
+          <a href="#" class="btn btn-success">Book Now $599</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <div class="text-center p-4 footer" style="background-color: rgba(0, 0, 0, 0.05);">
+      <p> &copy; 2021</p>
+      <div>
+        <button type="button" class="btn btn-primary">About us</button>
+        <button type="button" class="btn">Support 24x7</button>
+        <button type="button" class="btn">Privacy Policy</button>
+      </div>
+      <a class="navbar-brand" href="#">Vacation Rentals</a>
+    </div>
+  </footer>
+</body>
+
+</html>
